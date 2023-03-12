@@ -6,9 +6,9 @@ int N = int.Parse(Console.ReadLine());
 
 
 
-int  i = 0;
-while(i < N-1)
+int  i = 2;
+while(i <= N)
 {
-    Console.Write($"{i + 2}, ");
+    Console.Write($"{i}, ");
     i +=2;
 }
