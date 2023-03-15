@@ -2,16 +2,18 @@
 // обозначающую день недели,
 // и проверяет, является ли этот день выходным.
 
-void weekday (int n)
+
+void Week(int n)
 {
-    if ( 5 < n && n < 8)
-    Console.WriteLine("Этот день - выходной!!!");
-    else if ( n < 1 || 7 < n )
-    Console.WriteLine("Такого номера дня недели не бывает!");
+    if (n == 6 || n == 7)
+    Console.WriteLine("Урраааа, ВЫХОДНЫЫЫЕ!!!");
+    else if ( n < 1 || 7 < n)
+    Console.WriteLine("Таких дней недели НЕ бывает, abort");
     else
-    Console.WriteLine("Этот номер дня  -  будни()");
+    Console.WriteLine("Будни, блин(((");
 }
 
+Console.Write("Введите чОньть   ");
+int N = int.Parse(Console.ReadLine());
+Week(N);
 
-Console.WriteLine("Введем любой номер дня недели от 1 до 7:   ");
-weekday(int.Parse(Console.ReadLine()));

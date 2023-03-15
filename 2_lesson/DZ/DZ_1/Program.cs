@@ -1,13 +1,14 @@
 ﻿// Принимает на вход трехзначное число,
 // на выходе показывает вторую цифру этого числа.
 
-Console.Write("Введите трехзначное число N - ");
-int N = int.Parse(Console.ReadLine());
+Console.Write("Ведите трехзначное число N:  ");
 
-if (N>99 && N<1000) 
-Console.WriteLine($"Вторая цифра числа N является: - {N/10%10}");
+void snd_number(int N)
+{
+if ( 99 < N && N < 1000)
+Console.WriteLine($"Из введенного числа {N}, вторая цифра будет {N/10%10}");
 else
-Console.WriteLine("!!!Ошибочка!!!");
-Console.Write("Введите ТРЕХ-значное число N - ");
-int n = int.Parse(Console.ReadLine());
-Console.WriteLine($"Вторая цифра числа N является: - {n/10%10}");
+Console.WriteLine($"Ошибка!!");
+}
+
+snd_number(int.Parse(Console.ReadLine()));
