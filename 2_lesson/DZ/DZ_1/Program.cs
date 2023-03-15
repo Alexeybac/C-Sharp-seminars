@@ -3,12 +3,14 @@
 
 Console.Write("Ведите трехзначное число N:  ");
 
-void snd_number(int N)
+string snd_number(int N)
 {
 if ( 99 < N && N < 1000)
-Console.WriteLine($"Из введенного числа {N}, вторая цифра будет {N/10%10}");
+// Console.WriteLine($"Из введенного числа {N}, вторая цифра будет {N/10%10}");
+    return $"Из введенного числа {N}, вторая цифра будет {N/10%10}";
 else
-Console.WriteLine($"Ошибка!!");
+    return $"Ошибка!!";
+// Console.WriteLine($"Ошибка!!");
 }
 
-snd_number(int.Parse(Console.ReadLine()));
+Console.WriteLine(snd_number(int.Parse(Console.ReadLine())));
