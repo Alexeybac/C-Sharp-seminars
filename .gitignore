@@ -7,6 +7,7 @@
 .vscode/*
 bin/
 obj/
+*.png
 *.rsuser
 *.suo
 *.user
