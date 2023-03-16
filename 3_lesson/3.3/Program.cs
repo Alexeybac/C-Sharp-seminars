@@ -11,7 +11,8 @@ void Mass (int x)
     Console.Write($"{x} => ");
     for(int i = 1; i <= x; i++)
     {
-        Console.Write($"{Math.Pow(i,2)}, ");
+        if (i == x) Console.Write($"{Math.Pow(i,2)}");
+        else        Console.Write($"{Math.Pow(i,2)}, ");
     }
 }
 
