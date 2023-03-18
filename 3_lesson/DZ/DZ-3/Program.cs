@@ -10,12 +10,23 @@ int Nulloff (string text)
 }
 void Cube (int n)
 {
+    Console.WriteLine();
     Console.Write($"Число {n} => ");
-    for (int i = 1; i <= n; i++)
+    double[] mass = new double[n];
+
+    for (int i = 0; i < n; i++)
     {
-        if (i == n) Console.Write($"{i*i*i}. ");
+        mass[i] = Math.Pow((i+1),3);
+    }
+    for (int i = 0; i < n; i++)
+    {
+        if(i == n-1)
+        {
+        Console.Write($"{mass[i]}. Конец!");
+        Console.WriteLine();
+        }
         else
-        Console.Write($"{i*i*i}, ");
+        Console.Write($"{mass[i]}, ");
     }
 }
 
