@@ -1,5 +1,4 @@
 ﻿
-
 int Sum (int N)  // Рекурсия:
 {
     if (N == 0) return 1;
