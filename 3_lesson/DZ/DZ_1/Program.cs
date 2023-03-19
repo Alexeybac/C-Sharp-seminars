@@ -1,6 +1,8 @@
 ﻿// Принимает пятизначное число,
 // проверяет, является ли оно палиндромом.
 
+// Метод числа:
+
 int Nulloff (string text)
 {
     Console.Write(text);
@@ -18,3 +20,26 @@ void Palindrom (int x)
 
 int N = Nulloff("Введите пятизначное число:  ");
 Palindrom(N);
+
+// Метод строки:
+
+void Polindrom (double n)
+{
+    int i = 0;
+    string text = n.ToString();
+    int leng = text.Length-1;
+    string f = "!!!ПОЛИНДРОМ!!!";
+    while(i <= leng/2)
+    {
+        if (text[i] != text[leng-i]) 
+        {
+            f = "!!!НЕ полиндром!!!";
+            break;
+        }
+        i++;
+    }
+    Console.Write($"Число {n} = > {f}");
+}
+
+double num = Nulloff("Введите ЛЮБОЕ число II: ");
+Polindrom(num);
