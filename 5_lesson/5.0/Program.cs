@@ -1,13 +1,13 @@
 ﻿// 
 
-int[] Fillaray(int size)       // Формируем массив размером size:
+int[] Fillaray(int size, int x, int y)       // Формируем массив размером size:
 {
     int[] aray = new int[size];
     int leng = aray.Length;
 
     for (int i = 0; i < leng; i++)
     {
-        aray[i] = new Random().Next(-9, 9);
+        aray[i] = new Random().Next(x, y);
     }
     return aray;
 }
@@ -28,6 +28,7 @@ void sum(int [] aray)          // вычисляем и выводим на пе
     for (int i = 0; i < leng; i++)
     {
         if (aray[i] >= 0) sumup += aray[i];
+        else
         sumdown += aray[i];
     }
     Console.WriteLine($"Сумма положительных чисел массива =>     {sumup}");
@@ -35,10 +36,16 @@ void sum(int [] aray)          // вычисляем и выводим на пе
     Console.WriteLine();
 }
 
-Console.Write("Введите разряд массива: ");
+Console.Write("Введите, построчно, разряд массива и размерность наполнения : ");
 // int N = int.Parse(Console.ReadLine());
-int [] mass = Fillaray(int.Parse(Console.ReadLine()));
-Console.Write("Массив =>    ");
+// int x = int.Parse(Console.ReadLine());
+// int y = int.Parse(Console.ReadLine());
+int [] mass = Fillaray(int.Parse(Console.ReadLine()),
+                       int.Parse(Console.ReadLine()),
+                       int.Parse(Console.ReadLine()));
+Console.Write("Получен массив =>    ");
 Printaray(mass);
+Console.WriteLine();
+Console.WriteLine("Из которого:   ");
 Console.WriteLine();
 sum(mass);

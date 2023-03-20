@@ -22,7 +22,7 @@ double text ( int N)           // Решение через CHAR строку
     double summ = 0;
     for(int i = 0; i < leng; i++)
     {
-        double m = char.GetNumericValue(txt[i]);
+        double m = char.GetNumericValue(txt[i]); // Перевод символа цифры массива txt[i] в число m
         summ = summ + m;
     }
     return summ;
