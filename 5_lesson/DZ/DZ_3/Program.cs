@@ -32,4 +32,4 @@ Console.Write("Создадим массиФФчиг размером: ");
 double[] mass = CreateMassiv(int.Parse(Console.ReadLine()));
 
 double rezult = FindRez(mass);
-Console.Write($"Разница макимального и минимального элементов = >  {rezult}");
+Console.Write($"Разница макc и мин эл-ов =>  {Math.Round(rezult,2)}");
