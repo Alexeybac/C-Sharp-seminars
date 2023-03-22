@@ -8,7 +8,7 @@ double[] CreateMassiv(int size)
     double[] aray = new double[size];
     for (int i = 0; i < size; i++)
     {
-        aray[i] = new Random().Next(1, 10);
+        aray[i] = Math.Round(new Random().NextDouble() * 22 - 10,2);
         Console.Write($"{aray[i]}, ");
     }
     Console.WriteLine();
