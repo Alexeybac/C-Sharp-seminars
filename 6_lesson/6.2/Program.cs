@@ -27,6 +27,7 @@ int NullOff (string text)
     return n;
 }
 
+
 int N = NullOff("Введите число N: ");
 string rez = BinCode(N);
 Console.Write(rez);
