@@ -23,6 +23,7 @@ void PrintFib(int[] aray)
     {
         Console.Write($"{aray[i]} ");
     }
+    Console.WriteLine();
 }
 void FibKorteg(int N)   // == Кортеж ==
 {
@@ -33,10 +34,15 @@ void FibKorteg(int N)   // == Кортеж ==
         Console.Write($"{a} ");
         (a, b) = (b, a + b);
     }
+    Console.WriteLine();
 }
 
 int num = NullOff("Введите число Фибоначи: ");
-
-PrintFib(Fibonaccy(num));
-Console.WriteLine();
-FibKorteg(num);
+for (int j = 3; j <= num; j++)
+    PrintFib(Fibonaccy(j));
+    Console.WriteLine();
+for (int i = 3; i <= num; i++)
+    FibKorteg(i);
+// PrintFib(Fibonaccy(num));
+// Console.WriteLine();
+// FibKorteg(num);
