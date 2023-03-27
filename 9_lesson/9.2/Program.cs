@@ -21,6 +21,7 @@ void Num(int N, int M)
     if (M > N) return;
     Console.Write($"{M}, ");
     Num(N, M + 1);
+    
 }
 int m = NullOff("Введите число M:  ");
 int n = NullOff("Введите число N:  ");
