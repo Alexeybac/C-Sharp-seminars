@@ -52,3 +52,4 @@ int[,] massiv = CreateMassiv(NullOff("Введите кол-во строк ма
 PrintMassiv(massiv);
 Console.WriteLine("===Результат=======");
 PrintMassiv(SortMassiv(massiv));
+Console.ReadKey();

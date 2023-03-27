@@ -22,6 +22,7 @@ void PrintMassiv(int[,] arr)
     Console.WriteLine("====Massiv========");
     for (int i = 0; i < arr.GetLength(0); i++)
     {
+        Console.Write($"Строка {i+1}: =>   ");
         for (int j = 0; j < arr.GetLength(1); j++)
             Console.Write($"{arr[i, j],4}");
         Console.WriteLine();
@@ -46,8 +47,6 @@ int MinSumm(int[,] arr)
 int[,] massiv = CreateMassiv(NullOff("Введите кол-во строк массива:"),
                             NullOff("Введите нижний предел элементов:"),
                             NullOff("Введите верхний предел элементов:"));
-
 PrintMassiv(massiv);
 Console.WriteLine("===Результат=======");
-
 Console.WriteLine($"Строка с наименьшей суммой в массиве: {MinSumm(massiv) + 1}.");

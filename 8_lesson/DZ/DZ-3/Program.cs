@@ -30,6 +30,7 @@ void PrintMassiv(int[,] arr)
 int [,] Rez (int [,] arrA, int [,] arrB)
 {
     int [,] aray = new int [arrA.GetLength(0), arrB.GetLength(1)];
+    if (arrA.GetLength(1) != arrB.GetLength(0)) return aray;
         for (int i = 0; i < arrB.GetLength(1); i++)
             for (int j = 0; j < arrA.GetLength(0); j++)
                 for (int n = 0; n < arrB.GetLength(0); n++)
@@ -38,15 +39,17 @@ int [,] Rez (int [,] arrA, int [,] arrB)
 }
 
 
-int row = NullOff("Введите кол-во строк массива: ");
-int column = NullOff("Введите кол-во столбцов массива: ");
+int row = NullOff("Введите кол-во строк массива A: ");
+int column = NullOff("Введите кол-во столбцов массива A: ");
+int column2 = NullOff("Введите кол-во столбцов массива B: ");
 int from = NullOff("Введите нижний предел элементов: ");
 int to = NullOff("Введите верхний предел элементов: ");
-int [,] A = CreateMassiv(row+1, column, from, to);
-int [,] B = CreateMassiv(row, column-1, from, to);
+int [,] A = CreateMassiv(row, column, from, to);
+int [,] B = CreateMassiv(column, column2, from, to);
 PrintMassiv(A);
 PrintMassiv(B);
 Console.WriteLine("=====Результат======");
 
 int [,] rez = Rez(A, B);
 PrintMassiv(rez);
+Console.ReadKey();
